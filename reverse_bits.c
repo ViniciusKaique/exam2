@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-unsigned char reverse_bit(unsigned char n)
+unsigned char reverse_bits(unsigned char n)
 {
     unsigned char rev = 0;
-    int i = 8;
+    int i = 7;
     while(i >= 0)
     {
         rev = rev*2 + (n%2);
@@ -19,16 +19,16 @@ int main (void)
     int i = 7;
 
     printf("initial decimal: %u bit: ", n);
-    while(i != 0)
+    while(i >= 0)
     {
         printf("%d", n >> i & 1);
         i--;
     }
     printf("\n");
-    x = reverse_bit(n);
+    x = reverse_bits(n);
     i = 7;
-    printf("decimal reverse bit: %u bit: ", x);
-    while(i != 0)
+    printf("decimal reverse bits: %u bit: ", x);
+    while(i >= 0)
     {
         printf("%u", x >> i & 1);
         i--;
